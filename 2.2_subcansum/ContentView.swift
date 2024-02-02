@@ -5,68 +5,141 @@
 //  Created by PHYS 440 Rachelle on 1/31/24.
 //
 
+
 import SwiftUI
+import Charts
 
 struct ContentView: View {
-    @State private var sumsModel = sums123()
-    @State var Nstring = "0"
+    @Environment(PlotClass.self) var plotData
     
+    @State private var calculator = CalculatePlotData()
+    @State var isChecked:Bool = false
+    @State var tempInput = ""
+    
+    @State var selector = 0
+
     var body: some View {
-    
+        
+        @Bindable var plotData = plotData
+        
         VStack{
-            Text("N value")
-                .padding(.top)
-                .padding(.bottom, 0)
-            TextField("Enter 'N' value", text: $Nstring)
-                .padding(.horizontal)
-                .frame(width: 100)
-                .padding(.top, 0)
-                .padding(.bottom, 30)
             
-            HStack {  //equation 1 calculations
-                VStack{
-                    Text("Result of Summation 1:")
-                        .padding(.bottom, 0)
-                    Text("\(sumsModel.sum1, specifier: "%.16e")")
-                        .padding(.horizontal)
-                        .frame(width: 300)
-                        .padding(.top, 0)
-                        .padding(.bottom,30)
+            Group{
+                
+                HStack(alignment: .center, spacing: 0) {
                     
-                    Text("Results of Summation 2:")
-                        .padding(.bottom, 0)
-                    Text("\(sumsModel.sum2, specifier: "%.16e")")
-                        .padding(.horizontal)
-                        .frame(width: 300)
-                        .padding(.top, 0)
-                        .padding(.bottom,30)
-                    
-                    Text("Results of Summation 3:")
-                        .padding(.bottom, 0)
-                    Text("\(sumsModel.sum3, specifier: "%.16e")")
-                        .padding(.horizontal)
-                        .frame(width: 300)
-                        .padding(.top, 0)
-                        .padding(.bottom,30)
+                    Text($plotData.plotArray[selector].changingPlotParameters.yLabel.wrappedValue)
+                        .rotationEffect(Angle(degrees: -90))
+                        .foregroundColor(.red)
+                        .padding()
+                    VStack {
+                        Chart($plotData.plotArray[selector].plotData.wrappedValue) {
+                            LineMark(
+                                x: .value("Position", $0.xVal),
+                                y: .value("Height", $0.yVal)
+                                    
+                            )
+                            .foregroundStyle($plotData.plotArray[selector].changingPlotParameters.lineColor.wrappedValue)
+                            PointMark(x: .value("Position", $0.xVal), y: .value("Height", $0.yVal))
+                            
+                            .foregroundStyle($plotData.plotArray[selector].changingPlotParameters.lineColor.wrappedValue)
+                            
+                            
+                        }
+                        .chartYScale(domain: [ plotData.plotArray[selector].changingPlotParameters.yMin ,  plotData.plotArray[selector].changingPlotParameters.yMax ])
+                        .chartXScale(domain: [ plotData.plotArray[selector].changingPlotParameters.xMin ,  plotData.plotArray[selector].changingPlotParameters.xMax ])
+                        .chartYAxis {
+                            AxisMarks(position: .leading)
+                        }
+                        .padding()
+                        Text($plotData.plotArray[selector].changingPlotParameters.xLabel.wrappedValue)
+                            .foregroundColor(.red)
+                    }
                 }
+               // .frame(width: 350, height: 400, alignment: .center)
+                .frame(alignment: .center)
+                
+            }
+            .padding()
+    
+            
+            Divider()
+                    
+            HStack{
+                Button("Calculate", action: { Task.init{
+                    
+                    self.selector = 1
+                    
+                    await self.calculate2()
+                }
+                }
+                
+                )
+                .padding()
+                
             }
             
-            Button("Calculate", action: {self.calculate()})
-                .padding(.bottom)
-                .padding()
-               // .disabled(circleModel.enableButton == false)
         }
-            
     }
     
-    /// calculates roots using equation 1 and 2 from chapter 2
-        func calculate() {
-            let getN = Int(Nstring)!
-            let _ = sumsModel.initSums123(setN: getN)
-        }
+    @MainActor func setupPlotDataModel(selector: Int){
         
+        calculator.plotDataModel = self.plotData.plotArray[selector]
+    }
+    
+    
+    /// calculate
+    /// Function accepts the command to start the calculation from the GUI
+    func calculate() async {
+        
+        //pass the plotDataModel to the Calculator
+        
+        await setupPlotDataModel(selector: 0)
+        
+            
+            let _ = await withTaskGroup(of:  Void.self) { taskGroup in
+
+                taskGroup.addTask {
+
+        var temp = 0.0
+        
+        
+        //Calculate the new plotting data and place in the plotDataModel
+        await calculator.ploteToTheMinusX()
+        
+             
+                }
+      
+            }
+       
+    }
+    
+    
+    /// calculate
+    /// Function accepts the command to start the calculation from the GUI
+    func calculate2() async {
+        
+        
+        //pass the plotDataModel to the Calculator
+        
+        await setupPlotDataModel(selector: 1)
+        
+            let _ = await withTaskGroup(of:  Void.self) { taskGroup in
+
+                taskGroup.addTask {
+
+        var temp = 0.0
+    
+        //Calculate the new plotting data and place in the plotDataModel
+        await calculator.plotYEqualsX()
+                    
+                }
+                
+            }
+    }
 }
 
 #Preview {
     ContentView()
 }
+

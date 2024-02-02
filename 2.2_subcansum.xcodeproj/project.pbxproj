@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC683CDC2B6D8BE100D8022F /* CalcPlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CDB2B6D8BE100D8022F /* CalcPlotData.swift */; };
+		AC683CDD2B6D8BE100D8022F /* CalcPlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CDB2B6D8BE100D8022F /* CalcPlotData.swift */; };
+		AC683CDE2B6D8BE100D8022F /* CalcPlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CDB2B6D8BE100D8022F /* CalcPlotData.swift */; };
+		AC683CE02B6D8C3800D8022F /* PlotDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CDF2B6D8C3800D8022F /* PlotDataClass.swift */; };
+		AC683CE12B6D8C3800D8022F /* PlotDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CDF2B6D8C3800D8022F /* PlotDataClass.swift */; };
+		AC683CE22B6D8C3800D8022F /* PlotDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CDF2B6D8C3800D8022F /* PlotDataClass.swift */; };
+		AC683CE42B6D8C7500D8022F /* PlotDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CE32B6D8C7500D8022F /* PlotDataStruct.swift */; };
+		AC683CE52B6D8C7500D8022F /* PlotDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CE32B6D8C7500D8022F /* PlotDataStruct.swift */; };
+		AC683CE62B6D8C7500D8022F /* PlotDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CE32B6D8C7500D8022F /* PlotDataStruct.swift */; };
+		AC683CE82B6D8DAB00D8022F /* ChangingPlotParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CE72B6D8DAB00D8022F /* ChangingPlotParameters.swift */; };
+		AC683CE92B6D8DAB00D8022F /* ChangingPlotParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CE72B6D8DAB00D8022F /* ChangingPlotParameters.swift */; };
+		AC683CEA2B6D8DAB00D8022F /* ChangingPlotParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CE72B6D8DAB00D8022F /* ChangingPlotParameters.swift */; };
+		AC683CEC2B6D906900D8022F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CEB2B6D906900D8022F /* Operators.swift */; };
+		AC683CED2B6D906900D8022F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CEB2B6D906900D8022F /* Operators.swift */; };
+		AC683CEE2B6D906900D8022F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CEB2B6D906900D8022F /* Operators.swift */; };
+		AC683CF02B6D909A00D8022F /* PlotClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CEF2B6D909A00D8022F /* PlotClass.swift */; };
+		AC683CF12B6D909A00D8022F /* PlotClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CEF2B6D909A00D8022F /* PlotClass.swift */; };
+		AC683CF22B6D909A00D8022F /* PlotClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CEF2B6D909A00D8022F /* PlotClass.swift */; };
+		AC683CF42B6D910500D8022F /* TextExportDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CF32B6D910500D8022F /* TextExportDoc.swift */; };
+		AC683CF52B6D910500D8022F /* TextExportDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CF32B6D910500D8022F /* TextExportDoc.swift */; };
+		AC683CF62B6D910500D8022F /* TextExportDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CF32B6D910500D8022F /* TextExportDoc.swift */; };
+		AC683CF82B6D911600D8022F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CF72B6D911600D8022F /* TextView.swift */; };
+		AC683CF92B6D911600D8022F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CF72B6D911600D8022F /* TextView.swift */; };
+		AC683CFA2B6D911600D8022F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC683CF72B6D911600D8022F /* TextView.swift */; };
 		AC8AF7012B6B1CFC0000922D /* __2_subcansumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AF7002B6B1CFC0000922D /* __2_subcansumApp.swift */; };
 		AC8AF7032B6B1CFC0000922D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AF7022B6B1CFC0000922D /* ContentView.swift */; };
 		AC8AF7052B6B1CFE0000922D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8AF7042B6B1CFE0000922D /* Assets.xcassets */; };
@@ -35,6 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC683CDB2B6D8BE100D8022F /* CalcPlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcPlotData.swift; sourceTree = "<group>"; };
+		AC683CDF2B6D8C3800D8022F /* PlotDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotDataClass.swift; sourceTree = "<group>"; };
+		AC683CE32B6D8C7500D8022F /* PlotDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotDataStruct.swift; sourceTree = "<group>"; };
+		AC683CE72B6D8DAB00D8022F /* ChangingPlotParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingPlotParameters.swift; sourceTree = "<group>"; };
+		AC683CEB2B6D906900D8022F /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		AC683CEF2B6D909A00D8022F /* PlotClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotClass.swift; sourceTree = "<group>"; };
+		AC683CF32B6D910500D8022F /* TextExportDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExportDoc.swift; sourceTree = "<group>"; };
+		AC683CF72B6D911600D8022F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		AC8AF6FD2B6B1CFC0000922D /* 2.2_subcansum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.2_subcansum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8AF7002B6B1CFC0000922D /* __2_subcansumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __2_subcansumApp.swift; sourceTree = "<group>"; };
 		AC8AF7022B6B1CFC0000922D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,11 +130,19 @@
 			isa = PBXGroup;
 			children = (
 				AC8AF7002B6B1CFC0000922D /* __2_subcansumApp.swift */,
+				AC683CEF2B6D909A00D8022F /* PlotClass.swift */,
 				AC8AF7022B6B1CFC0000922D /* ContentView.swift */,
 				AC8AF7042B6B1CFE0000922D /* Assets.xcassets */,
 				AC8AF7062B6B1CFE0000922D /* __2_subcansum.entitlements */,
 				AC8AF7072B6B1CFE0000922D /* Preview Content */,
 				AC8AF72B2B6B1E370000922D /* sums123.swift */,
+				AC683CDB2B6D8BE100D8022F /* CalcPlotData.swift */,
+				AC683CDF2B6D8C3800D8022F /* PlotDataClass.swift */,
+				AC683CE32B6D8C7500D8022F /* PlotDataStruct.swift */,
+				AC683CE72B6D8DAB00D8022F /* ChangingPlotParameters.swift */,
+				AC683CEB2B6D906900D8022F /* Operators.swift */,
+				AC683CF32B6D910500D8022F /* TextExportDoc.swift */,
+				AC683CF72B6D911600D8022F /* TextView.swift */,
 			);
 			path = 2.2_subcansum;
 			sourceTree = "<group>";
@@ -263,8 +303,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8AF72C2B6B1E370000922D /* sums123.swift in Sources */,
+				AC683CF82B6D911600D8022F /* TextView.swift in Sources */,
+				AC683CEC2B6D906900D8022F /* Operators.swift in Sources */,
+				AC683CDC2B6D8BE100D8022F /* CalcPlotData.swift in Sources */,
+				AC683CE02B6D8C3800D8022F /* PlotDataClass.swift in Sources */,
+				AC683CE42B6D8C7500D8022F /* PlotDataStruct.swift in Sources */,
 				AC8AF7032B6B1CFC0000922D /* ContentView.swift in Sources */,
+				AC683CE82B6D8DAB00D8022F /* ChangingPlotParameters.swift in Sources */,
 				AC8AF7012B6B1CFC0000922D /* __2_subcansumApp.swift in Sources */,
+				AC683CF02B6D909A00D8022F /* PlotClass.swift in Sources */,
+				AC683CF42B6D910500D8022F /* TextExportDoc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +321,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8AF7132B6B1CFE0000922D /* __2_subcansumTests.swift in Sources */,
+				AC683CF12B6D909A00D8022F /* PlotClass.swift in Sources */,
+				AC683CE52B6D8C7500D8022F /* PlotDataStruct.swift in Sources */,
+				AC683CF52B6D910500D8022F /* TextExportDoc.swift in Sources */,
+				AC683CE92B6D8DAB00D8022F /* ChangingPlotParameters.swift in Sources */,
+				AC683CE12B6D8C3800D8022F /* PlotDataClass.swift in Sources */,
+				AC683CF92B6D911600D8022F /* TextView.swift in Sources */,
+				AC683CDD2B6D8BE100D8022F /* CalcPlotData.swift in Sources */,
+				AC683CED2B6D906900D8022F /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +337,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8AF71D2B6B1CFE0000922D /* __2_subcansumUITests.swift in Sources */,
+				AC683CE22B6D8C3800D8022F /* PlotDataClass.swift in Sources */,
+				AC683CEE2B6D906900D8022F /* Operators.swift in Sources */,
+				AC683CDE2B6D8BE100D8022F /* CalcPlotData.swift in Sources */,
+				AC683CE62B6D8C7500D8022F /* PlotDataStruct.swift in Sources */,
 				AC8AF71F2B6B1CFE0000922D /* __2_subcansumUITestsLaunchTests.swift in Sources */,
+				AC683CF62B6D910500D8022F /* TextExportDoc.swift in Sources */,
+				AC683CEA2B6D8DAB00D8022F /* ChangingPlotParameters.swift in Sources */,
+				AC683CF22B6D909A00D8022F /* PlotClass.swift in Sources */,
+				AC683CFA2B6D911600D8022F /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

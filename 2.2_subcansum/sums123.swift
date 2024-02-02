@@ -12,7 +12,7 @@ import Foundation
     var sum1 = 0.0
     var sum2 = 0.0
     var sum3 = 0.0
-    var N = 0
+    //var N = 0
     
     var sum1Text = ""
     var sum2Text = ""
@@ -20,10 +20,10 @@ import Foundation
     var enableButton = true
     
     
-    func initSums123(setN: Int) -> Bool {
-        N = setN
+    func initSums123() -> Bool {
+        //N = setN
         
-        Task{
+        /*Task{
             
             await setButtonEnable(state: false)
             
@@ -69,20 +69,22 @@ import Foundation
             await setButtonEnable(state: true)
             
         }
-        
+        */
         return true
     }
     
-    func getSum1() async -> (Type: String, StringToDisplay: String, Value: Double){
-        for n in 1...2*N {
+    func getSum1(N: Int) async -> Double{
+        sum1 = 0.0
+        let i = 2*N
+        for n in 1...i {
             sum1 = sum1 + pow((-1), Double(n)) * Double(n)/Double(n+1)
         }
         
-        let sum1Text = "\(sum1.formatted(.number.precision(.fractionLength(7))))"
-        return (Type: "Summation 1", StringToDisplay: sum1Text, Value: sum1)
+        return sum1
     }
     
-    func getSum2() async -> (Type: String, StringToDisplay: String, Value: Double){
+    func getSum2(N: Int) async -> Double {
+        sum2 = 0.0
         var sum2half1 = 0.0
         var sum2half2 = 0.0
         
@@ -91,18 +93,15 @@ import Foundation
             sum2half2 = sum2half2 + Double(2*n)/Double(2*n+1)
         }
         sum2 = sum2half2 - sum2half1
-        
-        let sum2Text = "\(sum2.formatted(.number.precision(.fractionLength(7))))"
-        return (Type: "Summation 2", StringToDisplay: sum2Text, Value: sum2)
+        return sum2
     }
     
-    func getSum3() async -> (Type: String, StringToDisplay: String, Value: Double){
+    func getSum3(N: Int) async -> Double{
+        sum3 = 0.0
         for n in 1...N {
             sum3 = sum3 + 1/Double(2*n*(2*n + 1))
         }
-        
-        let sum3Text = "\(sum3.formatted(.number.precision(.fractionLength(7))))"
-        return (Type: "Summation 3", StringToDisplay: sum3Text, Value: sum3)
+        return sum3
     }
     
     
